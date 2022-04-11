@@ -1,12 +1,13 @@
 #include<stdio.h>
-float mass(float);
-float g = 9.81;
+void change(int*);
 int main(){
-printf("Force applied by earth is %f \n",mass(16));
-    return 0;
+
+    int i = 5;
+    printf("the address of i is %u\n",i);
+    change(&i);
+    printf("the value of i after change is %u \n ",i);
+ return 0;
 }
-float mass(float m){
-    float f = m*g;
- return f;
+void change( int *ptr){
+    *ptr = (*ptr)*10;
 }
- 

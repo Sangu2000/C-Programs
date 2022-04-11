@@ -1,14 +1,8 @@
 #include<stdio.h>
-float sum(float, float, float);
 int main(){
-
-printf("The avg of nubers is %f \n",sum(25,36,69));
-
-
+    int a = 5;
+    int b =6;
+    printf("the adress of a and b are %u and %u\n",&a,&b);
+    printf("the value of address are %u and %u",*(&a),*(&b));
     return 0;
 }
-
-   float sum(float a,float b,float c){
-return (a+b+c)/3;
-   }
-

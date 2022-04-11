@@ -1,9 +1,13 @@
 #include<stdio.h>
-double Celcious(int);
+void func(int*);
 int main(){
-printf("the temp into F is %lf \n",Celcious(66));
-    return 0;
+
+    int i = 5;
+func(&i);
+    printf("the address of i is %u\n",&i);
+    printf("the value of i is%u\n ",*(&i));
+return 0;
 }
-double Celcious(int C){
-    return (C*(9/5.0))+32;
+void func( int *ptr){
+    printf("the value of address of ptr from function func is %u\n",ptr);
 }
