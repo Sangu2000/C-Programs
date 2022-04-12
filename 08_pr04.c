@@ -1,16 +1,15 @@
 #include<stdio.h>
-int fib(int);
-int n = 6;
+void avgandsum(float,float,float*,float*);
 int main(){
-printf("The elemt %d of fibonacci series is %d \n",n,fib(n));
+float a = 5;
+float b = 500;
+float sum , avg ;
+avgandsum(a,b,&sum,&avg);
+printf("the avg and sum of a and b is %f and %f,m   \n",sum,avg);
 
     return 0;
 }
-int fib(int n){
-    if (n==1  || n==2)
-    {
-        return 1;
-    }
-    
-    return fib(n-1) + fib(n-2);
+void avgandsum(float a, float b, float * ptr1,float * ptr2){
+    *ptr1 = a+b ;
+    *ptr2 = (a+b)/2;
 }
