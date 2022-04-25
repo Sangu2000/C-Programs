@@ -1,11 +1,15 @@
 #include<stdio.h>
-int main(){
-    int n ;
- printf("Write any number\n");
-    scanf("%d",&n);
+struct TwiDimVect
+{
+    int X;
+    int Y;
 
-    for(int i = 0; i < 11; i++){
-        printf("%d X %d = %d \n", n, i, i*n);
-    }
+};
+
+int main(){
+   struct TwiDimVect v1 = {1,4};
+    struct TwiDimVect v2 = {11,44};
+printf("%di + %dj\n",v1.X,v2.Y);
+printf("%di + %dj",v2.X,v1.Y);
     return 0;
 }
